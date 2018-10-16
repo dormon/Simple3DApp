@@ -1,11 +1,12 @@
 #pragma once
 
-#include<SDL2CPP/Window.h>
+#include <SDL2CPP/Window.h>
 #include <imguiSDL2OpenGL/imgui.h>
+#include <Simple3DApp/simple3dapp_export.h>
 
 namespace simple3DApp{
 
-class Application{
+class SIMPLE3DAPP_EXPORT Application{
   public:
     Application(int argc,char*argv[]);
     virtual ~Application();
