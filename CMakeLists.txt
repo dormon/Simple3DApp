@@ -13,6 +13,7 @@ set(PRIVATE_INCLUDES
   )
 set(PUBLIC_INCLUDES 
   src/${PROJECT_NAME}/Application.h
+  src/${PROJECT_NAME}/Fwd.h
   )
 set(INTERFACE_INCLUDES )
 
