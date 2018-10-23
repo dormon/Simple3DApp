@@ -15,6 +15,14 @@ namespace simple3DApp {
       mouseMove(e);
       return true;
     });
+    window->setEventCallback(SDL_MOUSEBUTTONDOWN, [&](SDL_Event const& e) {
+      mouseButton(e, true);
+      return true;
+    });
+    window->setEventCallback(SDL_MOUSEBUTTONUP, [&](SDL_Event const& e) {
+      mouseButton(e, false);
+      return true;
+    });
     window->setEventCallback(SDL_KEYDOWN, [&](SDL_Event const& e) {
       key(e, true);
       return true;
@@ -57,6 +65,8 @@ namespace simple3DApp {
   }
 
   void Application::mouseMove(SDL_Event const&) {}
+
+  void Application::mouseButton(SDL_Event const&, bool) {}
 
   void Application::key(SDL_Event const&, bool) {}
   

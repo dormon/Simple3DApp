@@ -12,6 +12,7 @@ class simple3DApp::Application {
   SIMPLE3DAPP_EXPORT void         start();
   SIMPLE3DAPP_EXPORT void         swap();
   SIMPLE3DAPP_EXPORT virtual void mouseMove(SDL_Event const& e);
+  SIMPLE3DAPP_EXPORT virtual void mouseButton(SDL_Event const& e, bool down);
   SIMPLE3DAPP_EXPORT virtual void key(SDL_Event const& e, bool down);
   SIMPLE3DAPP_EXPORT virtual void resize(uint32_t x, uint32_t y);
   SIMPLE3DAPP_EXPORT virtual void draw();
