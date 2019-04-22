@@ -31,6 +31,10 @@ namespace simple3DApp {
       key(e, false);
       return true;
     });
+    mainLoop->setEventCallback(SDL_QUIT,[&](SDL_Event const&){
+      mainLoop->stop();
+      return true;
+    });
     window->setWindowEventCallback(SDL_WINDOWEVENT_RESIZED,[&](SDL_Event const& e){
       resize(e.window.data1,e.window.data2);
       return true;
