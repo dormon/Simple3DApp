@@ -7,7 +7,7 @@
 
 class simple3DApp::Application {
  public:
-  SIMPLE3DAPP_EXPORT Application(int argc, char* argv[]);
+  SIMPLE3DAPP_EXPORT Application(int argc, char* argv[],uint32_t contextVersion = 450u);
   SIMPLE3DAPP_EXPORT virtual ~Application();
   SIMPLE3DAPP_EXPORT void         start();
   SIMPLE3DAPP_EXPORT void         swap();

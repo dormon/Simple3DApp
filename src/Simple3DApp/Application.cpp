@@ -3,7 +3,7 @@
 
 namespace simple3DApp {
 
-  Application::Application(int argc, char* argv[]) : argc(argc), argv(argv)
+  Application::Application(int argc, char* argv[],uint32_t contextVersion) : argc(argc), argv(argv)
   {
     mainLoop = std::make_shared<sdl2cpp::MainLoop>();
     mainLoop->setIdleCallback([&](){
@@ -39,7 +39,7 @@ namespace simple3DApp {
       resize(e.window.data1,e.window.data2);
       return true;
     });
-    window->createContext("rendering", 450u, sdl2cpp::Window::CORE,
+    window->createContext("rendering", contextVersion, sdl2cpp::Window::CORE,
                           sdl2cpp::Window::DEBUG);
     mainLoop->addWindow("primaryWindow", window);
     window->makeCurrent("rendering");
