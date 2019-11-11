@@ -219,7 +219,7 @@ foreach(lib ${ExternPublicLibraries} ${ExternInterfaceLibraries})
   else()
     list(GET lib 1 libVersion)
     #try to match the version
-    string(REGEX MATCH "^[0-9]+(\\.[0-9]+)$" matchedVersion ${libVersion})
+    string(REGEX MATCH "^[0-9]+(\\.[0-9]+)*$" matchedVersion ${libVersion})
     if("${matchedVersion}" STREQUAL "")
       string(CONCAT ConfigContent
         ${ConfigContent}
