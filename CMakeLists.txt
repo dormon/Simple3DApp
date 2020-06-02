@@ -48,7 +48,7 @@ set(PrivateDebugLibraryVariables )
 set(PublicDebugLibraryVariables )
 set(InterfaceDebugLibraryVariables )
 
-SET(CMAKE_CXX_STANDARD 14)
+SET(CMAKE_CXX_STANDARD 17)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_INCLUDE_CURRENT_DIR_IN_INTERFACE ON)
